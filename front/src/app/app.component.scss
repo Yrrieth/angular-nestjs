@@ -1,0 +1,15 @@
+mat-sidenav-container {
+    height: calc(100vh - 64px);
+  }
+  
+  @media (max-width: 600px) {
+      mat-sidenav-container {
+          height: calc(100vh - 56px)
+      }
+  }
+  
+  .menu{
+    min-width:10em;
+    display: flex;
+    flex-direction: column;
+  }

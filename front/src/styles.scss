@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+@import './theme.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+#logo {
+    margin-top: 10px;
+    width: 50px;
+}
+
+#title {
+    margin-left: 10px;
+    text-decoration: none;
+    color: green;
+}
+
+#home_toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    //align-items: flex-start;
+    box-shadow: 0 0px 10px;
+}
+#button_before_login {
+    color: green;
+    margin-left: auto;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    //margin-top: 2%;
+    margin: 2% 30% 0 30%;
+    padding: 1em;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #AEEA00;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form  > mat-form-field {
+    //width: 80%;
+    flex-direction: column;
+    //margin: 0 20%;
+}
+
+.form > button {
+    margin: 0 40%;
+}
+
+.alert-danger {
+    background-color: #f44336; /* Red */
+}
+
+.alert {
+    padding: 20px;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.background_color {
+    background-color: #AEEA00;
+}

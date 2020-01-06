@@ -1,0 +1,28 @@
+<div class="container">
+
+    <div class="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username">
+            <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <!--<mat-form-field appearance="outline">
+            <mat-label>Email address</mat-label>
+            <input matInput placeholder="Email address">
+            <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>-->
+        
+        <button mat-button 
+            type="submit"
+            class="background_color">Sign up</button>
+    </div>
+</div>

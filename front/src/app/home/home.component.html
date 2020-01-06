@@ -1,0 +1,24 @@
+<mat-toolbar
+    color="primary"
+    id="home_toolbar">
+    <a [routerLink]="['/']">
+        <img src="../assets/images/logos/Initiale.png"
+            alt="Logo of the website"
+            id="logo">
+    </a>
+    <a [routerLink]="['/']"
+        id="title">
+        Yrrieth's website
+    </a>
+    <!--<app-button-before-login *ngIf="routeHidden"
+        id="button_before_login"></app-button-before-login>-->
+
+    <app-button-before-login *ngIf="routeHidden"
+        id="button_before_login"></app-button-before-login>
+</mat-toolbar>
+
+<!--<div *ngIf="loading" class="spinner-border spinner-border-sm">
+    <ul *ngIf="users">
+        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+    </ul>
+</div>-->
