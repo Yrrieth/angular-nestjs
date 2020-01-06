@@ -17,8 +17,10 @@
         id="button_before_login"></app-button-before-login>
 </mat-toolbar>
 
-<!--<div *ngIf="loading" class="spinner-border spinner-border-sm">
+<div *ngIf="routeHidden">
+    <div *ngIf="loading" class="spinner-border spinner-border-sm"></div>
+    <span>Element de la base de donnée : </span>
     <ul *ngIf="users">
-        <li *ngFor="let user of users">{{user.firstName}} {{user.lastName}}</li>
+        <li *ngFor="let user of users">{{user.userId}} {{user.username}}</li>
     </ul>
-</div>-->
+</div>
