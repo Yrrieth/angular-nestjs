@@ -6,6 +6,11 @@
             <input matInput placeholder="Username">
             <mat-icon matSuffix>person</mat-icon>
         </mat-form-field>
+        <div *ngIf="submitted && f.username.errors">
+            <mat-error *ngIf="f.username.errors.required">
+                Username is required
+            </mat-error>
+        </div>
         
         <mat-form-field appearance="outline">
             <mat-label>Password</mat-label>
@@ -14,6 +19,11 @@
                 <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
         </mat-form-field>
+        <div *ngIf="submitted && f.password.errors">
+            <mat-error *ngIf="f.username.errors.required">
+              Password is required
+            </mat-error>
+        </div>
 
         <!--<mat-form-field appearance="outline">
             <mat-label>Email address</mat-label>
@@ -21,6 +31,12 @@
             <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>-->
         
+        <mat-spinner
+            [style.display]="showSpinner ? 'block' : 'none'">
+        </mat-spinner>
+        <mat-error *ngIf="error" class="alert alert-danger">{{ 
+            error }}
+        </mat-error>
         <button mat-button 
             type="submit"
             class="background_color">Sign up</button>

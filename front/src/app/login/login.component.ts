@@ -49,6 +49,7 @@ export class LoginComponent implements OnInit {
 
     // stop here if form is invalid
     if (this.loginForm.invalid) {
+      this.error = "Username or password is invalid.";
         return;
     }
 
